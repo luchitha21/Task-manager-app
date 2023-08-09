@@ -25,7 +25,7 @@ app.post("/tasks", (req, res) => {
 });
 
 // PUT endpiont to update
-app.patch("/tasks/:id", (req, res) => {
+app.put("/tasks/:id", (req, res) => {
   const id = parseInt(req.params.id);
   const todo = tasks.find((t) => t.id === id);
   if (!todo) {
